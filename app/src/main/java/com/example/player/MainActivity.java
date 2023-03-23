@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnPre
 
             case R.id.btnRAW:
                 // код выполнения кнопки btnRAW
-                toast = Toast.makeText(this, "Запущен аудио-файл с памяти телефона", Toast.LENGTH_SHORT); // инициализация
+                toast = Toast.makeText(this, "Выбран аудио-файл с памяти телефона", Toast.LENGTH_SHORT); // инициализация
                 toast.show(); // демонстрация тоста на экране
                 mediaPlayer = MediaPlayer.create(this, R.raw.bal_u_larinyh_antrakt); // создание дорожки с имеющимся аудио-файлом
-                mediaPlayer.start(); // старт данной дорожки
+                //mediaPlayer.start(); // старт данной дорожки
                 nameAudio = "Евгений Онегин - Бал у Лариных"; // инициализация названия контента
                 break;
 
