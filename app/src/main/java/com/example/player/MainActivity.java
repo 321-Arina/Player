@@ -101,6 +101,12 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnPre
             case R.id.btnBack:
                 mediaPlayer.seekTo(mediaPlayer.getCurrentPosition() - 5000); // переход к определённой позиции трека
                 break;
+            case R.id.volMinus:
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)-1, 0);
+                break;
+            case R.id.volPlus:
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)+1, 0);
+                break;
         }
         // информативный вывод информации
         textOut.setText(nameAudio + "\n(проигрывание " + mediaPlayer.isPlaying() + ", время " + mediaPlayer.getCurrentPosition()
